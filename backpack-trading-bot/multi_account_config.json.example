@@ -1,0 +1,46 @@
+{
+  "accounts": [
+    {
+      "account_id": "account_1",
+      "name": "用户账户1",
+      "api_key": "YOUR_API_KEY_1",
+      "private_key": "YOUR_PRIVATE_KEY_1",
+      "enabled": true,
+      "description": "第一个账户",
+      "proxy": {
+        "enabled": false,
+        "gateway": "proxy.example.com",
+        "port": 1080,
+        "username": "proxy_username",
+        "password": "proxy_password"
+      }
+    },
+    {
+      "account_id": "account_2", 
+      "name": "用户账户2",
+      "api_key": "YOUR_API_KEY_2",
+      "private_key": "YOUR_PRIVATE_KEY_2",
+      "enabled": true,
+      "description": "第二个账户",
+      "proxy": {
+        "enabled": false,
+        "gateway": "proxy.example.com",
+        "port": 1080,
+        "username": "proxy_username",
+        "password": "proxy_password"
+      }
+    }
+  ],
+  "global_settings": {
+    "max_concurrent_accounts": 3,
+    "account_start_delay": 30,
+    "cycle_interval": 3600,
+    "daily_cycles": 24,
+    "operation_delay": [10, 30],
+    "max_daily_loss": 5.0
+  },
+  "proxy_rotation": {
+    "enabled": true,
+    "rotation_interval": 300
+  }
+}

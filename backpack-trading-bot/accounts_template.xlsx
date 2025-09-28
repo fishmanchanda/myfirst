@@ -1,0 +1,12 @@
+需要注意：由于这是文本环境，无法创建实际的Excel文件。
+请手动创建一个Excel文件，包含以下列：
+- account (账户名称)
+- API Key (API密钥)
+- API Secret (API私钥)
+- email (邮箱，可选)
+- enabled (是否启用，TRUE/FALSE)
+
+示例内容：
+account     | API Key              | API Secret           | email               | enabled
+账户1       | YOUR_API_KEY_1       | YOUR_PRIVATE_KEY_1   | user1@example.com   | TRUE
+账户2       | YOUR_API_KEY_2       | YOUR_PRIVATE_KEY_2   | user2@example.com   | TRUE

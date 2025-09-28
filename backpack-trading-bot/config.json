@@ -1,0 +1,82 @@
+{
+  "trading": {
+    "max_position_size": 10.0,
+    "stop_loss_pct": 0.004,
+    "take_profit_pct": 0.01,
+    "min_order_size": 10.0,
+    "trading_pairs": ["SOL_USDC", "BTC_USDC", "ETH_USDC"],
+    "trading_interval": 120,
+    "24h_mode": true,
+    "low_frequency_mode": true
+  },
+  "strategies": {
+    "ma_crossover": {
+      "enabled": true,
+      "fast_period": 10,
+      "slow_period": 20,
+      "weight": 0.8
+    },
+    "rsi_mean_reversion": {
+      "enabled": true,
+      "rsi_period": 14,
+      "oversold": 35,
+      "overbought": 65,
+      "weight": 0.7
+    },
+    "grid_trading": {
+      "enabled": true,
+      "grid_levels": 5,
+      "grid_spread": 0.003,
+      "weight": 0.6
+    },
+    "market_making": {
+      "enabled": true,
+      "spread": 0.002,
+      "quantity": 10.0,
+      "weight": 0.5
+    }
+  },
+  "risk_management": {
+    "max_daily_loss": 0.03,
+    "max_hourly_loss": 0.01,
+    "max_drawdown": 0.08,
+    "position_sizing_method": "fixed_percentage",
+    "cooldown_period": 300,
+    "recovery_threshold": 0.02
+  },
+  "24h_schedule": {
+    "enabled": true,
+    "peak_hours": {
+      "start": 9,
+      "end": 17,
+      "trading_weight": 1.2,
+      "interval_multiplier": 0.8
+    },
+    "off_hours": {
+      "start": 18,
+      "end": 8,
+      "trading_weight": 0.6,
+      "interval_multiplier": 1.5
+    },
+    "maintenance_window": {
+      "start": 2,
+      "end": 4,
+      "trading_weight": 0.3,
+      "interval_multiplier": 2.0
+    }
+  },
+  "monitoring": {
+    "health_check_interval": 300,
+    "auto_restart": true,
+    "max_restart_attempts": 3,
+    "restart_delay": 60,
+    "performance_logging": true
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "trading.log",
+    "max_file_size": "50MB",
+    "backup_count": 10,
+    "rotation_interval": "daily"
+  }
+}
